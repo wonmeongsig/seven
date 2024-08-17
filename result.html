@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>당신의 MBTI 유형은: <span id="mbti-type"></span>입니다!</h1>
+    <a href="index.html">다시 검사하기</a>
+    <script>
+        // URL에서 MBTI 유형을 가져와서 표시
+        const urlParams = new URLSearchParams(window.location.search);
+        const mbtiType = urlParams.get('mbti');
+        document.getElementById('mbti-type').textContent = mbtiType;
+    </script>
+</body>
+</html>
